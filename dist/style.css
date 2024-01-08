@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    #container.custom{
+        @apply -translate-y-40;
+    }
+
+    #user_card.custom{
+        @apply scale-100;
+    }
+
+    #overlay.custom{
+        @apply z-10 opacity-70;
+    }
+
+    #link_arrow.custom{
+        @apply left-2 opacity-100;
+    }
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GitiGit</title>
+        <link rel="stylesheet" href="tailwind.css" />
+        <link rel="icon" href="img/github-user.png" type="image/png" />
+        <script defer src="script.js"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    </head>
+
+    <body
+        class="h-dvh overflow-hidden bg-[url(img/space-blur.jpg)] bg-cover bg-center bg-no-repeat font-mono transition-[background] duration-[6s] ease-in-out">
+        <div id="overlay" class="duration-600 fixed h-full w-full bg-[#7688BB] opacity-25 transition-all ease-linear"></div>
+        <div id="container" class="duration-600 absolute left-1/2 top-1/4 flex -translate-x-1/2 items-start transition-all ease-in-out">
+            <img src="svg/github-logo.svg" alt="github logo" />
+
+            <div>
+                <input
+                    id="search"
+                    class="focus:border-[#0B0B25]-600 w-[32rem] rounded-2xl border-[5px] border-solid border-[#0B0B25] bg-[#ffffff] p-4 text-2xl capitalize text-[#121212] opacity-[0.9] shadow-[0px_0px_100px_20px_rgb(28,115,255,0.5)] outline-none backdrop-blur-[3px] placeholder:text-[#121212]"
+                    type="text"
+                    spellcheck="false"
+                    placeholder="search user" />
+
+                <ul
+                    id="suggestions_menu"
+                    class="m-1 cursor-pointer list-none overflow-hidden rounded-xl bg-[#0B0B25] text-2xl text-white opacity-[0.9]">
+                    <!---More lists added here-->
+                </ul>
+            </div>
+        </div>
+
+        <div
+            id="user_card"
+            class="duration-600 absolute left-1/2 top-1/2 z-20 flex h-72 w-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 overflow-hidden rounded-2xl shadow-[0px_0px_100px_30px_rgb(22,27,34,0.5)] transition-all ease-in-out">
+            <img id="user_image" class="h-full w-72  outline-none" />
+            <div id="user_descreption" class="h-full w-full p-8 text-white backdrop-blur-md">
+                <h1 id="user_name"></h1>
+                <div class="-tracking-tight text-[#dddddd] flex items-center cursor-pointer">
+                    <a id="user_url" target="_blank"><h2 id="user_username"></h2></a>
+                    <img        
+                        id="link_arrow"
+                        class="relative left-20 w-4 h-2 rotate-180 transition-all duration-200 opacity-0"
+                        src="svg/up_right.svg" />
+                </div>
+                <fieldset class="mt-4 rounded-lg border-2 border-solid bg-[#4c4c4c] px-4 pb-2 pt-1">
+                    <legend>bio</legend>
+                    <h1 id="user_bio"></h1>
+                </fieldset>
+
+                <div class="absolute bottom-6 flex gap-10 text-[#dddddd]">
+                    <p>followers: <span id="user_followers" class="text-2xl text-white"></span></p>
+                    <p>following: <span id="user_following" class="text-2xl text-white"></span></p>
+                </div>
+            </div>
+
+            
+        </div>
+    </body>
+</html>
