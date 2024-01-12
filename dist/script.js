@@ -110,7 +110,7 @@ const renderCard = async function () {
 
     const selectedUser = userData[index].getAttribute('name');
     console.log(selectedUser);
-    const user =await fetch(`https://api.github.com/users/${selectedUser}`)
+    const user =await fetch(`https://api.github.com/users/${selectedUser}`,{})
         .then((res) => res.json())
         .then((data) => data)
         .catch(err=>{});  
