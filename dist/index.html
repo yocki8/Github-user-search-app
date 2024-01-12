@@ -11,18 +11,18 @@
     </head>
 
     <body
-        class="h-dvh overflow-hidden bg-[url(img/space-blur.jpg)] bg-cover bg-center bg-no-repeat font-mono transition-[background] duration-[6s] ease-in-out">
+        class="h-dvh overflow-hidden bg-[url(img/space-blur.jpg)] bg-cover bg-center bg-no-repeat font-mono transition-[background] duration-[2s] ease-in-out">
         <div id="overlay" class="duration-600 fixed h-full w-full bg-[#7688BB] opacity-25 transition-all ease-linear"></div>
-        <div id="container" class="duration-600 absolute left-1/2 top-1/4 flex -translate-x-1/2 items-start transition-all ease-in-out">
-            <img src="svg/github-logo.svg" alt="github logo" />
+        <div id="container" class="duration-600 absolute left-1/2 top-1/4 -translate-x-1/2 transition-all ease-in-out">
+            <img src="svg/github-logo.svg" alt="github logo" class="m-auto" />
 
             <div>
                 <input
                     id="search"
-                    class="focus:border-[#0B0B25]-600 w-[32rem] rounded-2xl border-[5px] border-solid border-[#0B0B25] bg-[#ffffff] p-4 text-2xl capitalize text-[#121212] opacity-[0.9] shadow-[0px_0px_100px_20px_rgb(28,115,255,0.5)] outline-none backdrop-blur-[3px] placeholder:text-[#121212]"
+                    class="focus:border-[#0B0B25]-600 w-[32rem] rounded-md border-2 border-solid bg-transparent bg-none px-6 py-4 text-2xl text-white opacity-[0.9] shadow-[25px_25px_150px_5px_rgb(0,0,0,1)] outline-none backdrop-blur-xl placeholder:text-white"
                     type="text"
                     spellcheck="false"
-                    placeholder="search user" />
+                    placeholder="Search user" />
 
                 <ul
                     id="suggestions_menu"
@@ -35,15 +35,12 @@
         <div
             id="user_card"
             class="duration-600 absolute left-1/2 top-1/2 z-20 flex h-72 w-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 overflow-hidden rounded-2xl shadow-[0px_0px_100px_30px_rgb(22,27,34,0.5)] transition-all ease-in-out">
-            <img id="user_image" class="h-full w-72  outline-none" />
+            <img id="user_image" class="h-full w-72 outline-none" />
             <div id="user_descreption" class="h-full w-full p-8 text-white backdrop-blur-md">
                 <h1 id="user_name"></h1>
-                <div class="-tracking-tight text-[#dddddd] flex items-center cursor-pointer">
+                <div class="flex cursor-pointer items-center -tracking-tight text-[#dddddd]">
                     <a id="user_url" target="_blank"><h2 id="user_username"></h2></a>
-                    <img        
-                        id="link_arrow"
-                        class="relative left-20 w-4 h-2 rotate-180 transition-all duration-200 opacity-0"
-                        src="svg/up_right.svg" />
+                    <img id="link_arrow" class="relative left-20 h-2 w-4 rotate-180 opacity-0 transition-all duration-200" src="svg/up_right.svg" />
                 </div>
                 <fieldset class="mt-4 rounded-lg border-2 border-solid bg-[#4c4c4c] px-4 pb-2 pt-1">
                     <legend>bio</legend>
@@ -51,12 +48,16 @@
                 </fieldset>
 
                 <div class="absolute bottom-6 flex gap-10 text-[#dddddd]">
-                    <p>followers: <span id="user_followers" class="text-2xl text-white"></span></p>
-                    <p>following: <span id="user_following" class="text-2xl text-white"></span></p>
+                    <p>
+                        followers:
+                        <span id="user_followers" class="text-2xl text-white"></span>
+                    </p>
+                    <p>
+                        following:
+                        <span id="user_following" class="text-2xl text-white"></span>
+                    </p>
                 </div>
             </div>
-
-            
         </div>
     </body>
 </html>
